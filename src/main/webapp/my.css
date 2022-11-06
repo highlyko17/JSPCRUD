@@ -1,0 +1,97 @@
+*{ box-sizing: border-box}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+input, select{
+    width: 100%;
+    padding: 12px;
+    border-style: ridge;
+    border-radius: 5px;
+    border-width: thin;
+    border-bottom: none;
+    border-color: rgba(10,10,10,0.19);
+    text-align: center;
+}
+
+.area_label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    float: left;
+    width: 15%;
+    text-align: center;
+}
+
+.area_text {
+    float: left;
+    width: 85%;
+}
+
+h1 {
+    text-align: center;
+}
+
+#submit{
+    width: 325px;
+    background-color: #555555;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#reset{
+    width: 325px;
+    background-color: white;
+    color: #555555;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.buttons, .delete_wrapper{
+    text-align: center;
+}
+
+.ttons {
+    text-align: center;
+}
+
+.index_button {
+    float: right;
+}
+
+#add {
+    width: 150px;
+    background-color: #555555;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#edit, #edit1, #edit2 {
+    background-color: rgba(174,30,230,0.33);
+    color: #555555;
+    border: none;
+    border-radius: 5px;
+}
+
+#delete_button {
+    width: 325px;
+    background-color: white;
+    color: #555555;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    .area_label, .area_text, input[type=submit], input[type=reset], #1_table, #2_table, #3_table{
+        width: 100%;
+        margin-top: 0;
+    }
+}

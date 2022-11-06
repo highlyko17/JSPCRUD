@@ -10,35 +10,46 @@
     request.setCharacterEncoding("UTF-8");
 
     String stu_name = request.getParameter("stu_name");
-    String stu_major1 = request.getParameter("stu_major1");
-    String stu_major2 = request.getParameter("stu_major2");
     String stu_id = request.getParameter("stu_id");
-    String grade = request.getParameter("grade");
-    String stu_gender_m = request.getParameter("stu_gender");
     String stu_email = request.getParameter("stu_email");
-    String field1 = request.getParameter("field1");
-    String topic = request.getParameter("topic");
-    String datemin = request.getParameter("datemin");
-    String datemax = request.getParameter("datemax");
+    String stu_dep = request.getParameter("stu_dep");
+    String stu_tel = request.getParameter("stu_phone");
+    String tent = request.getParameter("tent");
+    String stu_date = request.getParameter("stu_date");
+    String stu_num = request.getParameter("stu_num");
+    String stu_rc = request.getParameter("stu_rc");
+    String food = request.getParameter("food");
 %>
 <html>
 <head>
-    <title>Title</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="my.css">
+    <title>신청 완료</title>
+    <style>
+        .php_form {
+            text-align: center;
+        }
+
+        #php_text {
+            padding: 15px;
+        }
+    </style>
 </head>
 <body>
-<h2>입력하신 항목은 다음과 같습니다</h2>
-
-이름: <%=stu_name%> <br />
-1전공: <%=stu_major1%> <br />
-2전공: <%=stu_major2%> <br />
-학번: <%=stu_id%> <br />
-학년: <%=grade%> <br />
-<%-- 성별: <%=stu_gender%> <br /> --%>
-이메일: <%=stu_email%> <br />
-<%-- 분야: <%=field1%> <br /> --%>
-주제: <%=topic%> <br />
-가능한 시작 날짜: <%=datemin%> <br />
-가능한 종료 날짜: <%=datemax%> <br />
-
+<div class = "container">
+    <div class = "php_form">
+        <h3>신청이 완료되었습니다</h3>
+        <div id = "php_text1">이름: <%= stu_name%> </div>
+        <div id = "php_text2">학번: <%= stu_id%> </div>
+        <div id = "php_text3">학부: <%= stu_dep%> </div>
+        <div id = "php_text10">RC: <%= stu_rc%> </div>
+        <div id = "php_text4">이메일: <%= stu_email%> </div>
+        <div id = "php_text5">전화번호: <%= stu_tel%> </div>
+        <div id = "php_text6">날짜: <%= stu_date%> </div>
+        <div id = "php_text7">신청 항목: <%= tent%> </div>
+        <div id = "php_text9">사용 인원: <%= stu_num%> </div>
+        <div id = "php_text8">음식유무: <%= food%> </div>
+    </div>
+</div>
 </body>
 </html>

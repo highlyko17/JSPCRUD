@@ -8,78 +8,113 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>🕹 TOY PROJECT 🕹</title>
-  <style>
-    body {
-      text-align: center;
-    }
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="my.css">
+  <title>ADD</title>
+  <script>
+    function check(){
+      let name = document.form1.stu_name;
+      if (name.value == ""){
+        alert("이름을 입력하세요");
+        name.focus();
+        return false;
+      }
 
-    fieldset {
-      margin: 0 auto;
+      let id = document.form1.stu_id;
+      if (id.value == ""){
+        alert("학번을 입력하세요");
+        id.focus();
+        return false;
+      }
     }
-
-    #stu_email {
-      width: 14%;
-    }
-
-    #stu_id, #stu_name, #stu_major1, #stu_major2 {
-      width: 15%;
-    }
-
-    .dep_list {
-      text-align: center;
-    }
-
-    fieldset {
-      width: 15%;
-    }
-  </style>
+  </script>
 </head>
 <body>
-<h1>🕹 TOY PROJECT 🕹</h1>
-<form action = "form_ok.jsp" method = "post">
-  <label for="stu_name">이름:</label>
-  <input type = "text" id = "stu_name" name = "stu_name" required><br><br>
-  <label for="stu_major1">1전공:</label>
-  <select id = "stu_major1" name = "stu_major1">
-    <option class = "dep_list" value="컴퓨터공학">컴퓨터공학</option>
-    <option class = "dep_list" value="전자공학">전자공학</option>
-    <option class = "dep_list" value="시각디자인">시각디자인</option>
-    <option class = "dep_list" value="제품디자인2">제품디자인</option>
-  </select><br><br>
-  <label for="stu_major2">2전공:</label>
-  <select id = "stu_major2" name = "stu_major2">
-    <option class = "dep_list" value="컴퓨터공학">컴퓨터공학</option>
-    <option class = "dep_list" value="전자공학">전자공학</option>
-    <option class = "dep_list" value="시각디자인">시각디자인</option>
-    <option class = "dep_list" value="제품디자인2">제품디자인</option>
-  </select><br><br>
-  <label for="stu_id">학번:</label>
-  <input type = "text" id = "stu_id" name = "stu_id" required><br><br>
-  <label for="grade1">학년</label><br>
-  <input type = "checkbox" id = "grade1" name = "grade[]" value="1">1학년
-  <input type = "checkbox" id = "grade2" name = "grade[]" value="2">2학년
-  <input type = "checkbox" id = "grade3" name = "grade[]" value="2">3학년
-  <input type = "checkbox" id = "grade4" name = "grade[]" value="2">4학년<br><br>
-  <label for="stu_gender_m">성별</label>
-  <input type = "radio" id = "stu_gender_m" name = "stu_gender[]" value="남자">남
-  <input type = "radio" id = "stu_gender_w" name = "stu_gender[]" value="여자">여<br><br>
-  <label for="stu_email">이메일:</label>
-  <input type = "email" id = "stu_email" name = "stu_email" required><br><br>
-  <label for="field1">분야</label>
-  <input type = "checkbox" id = "field1" name = "field1" value="web">웹
-  <input type = "checkbox" id = "field2" name = "field2" value="app">앱<br><br>
-  <label for="topic">주제 설명</label><br>
-  <textarea id = "topic" name = "topic" rows="10" cols="20">Explain your plan</textarea><br><br>
-  <fieldset>
-    <legend>가능한 기간</legend>
-    <label for="datemin">시작</label>
-    <input type="date" id="datemin" name="datemin" min="2022-09-30"><br><br>
-    <label for="datemax">종료</label>
-    <input type="date" id="datemax" name="datemax" max="2024-01-01"><br><br>
-  </fieldset><br>
-  <input type = 'submit' value="SAVE"> <input type = 'reset' value="CANCEL">
-</form>
+<h1>☑️ADD</h1>
+<div class = "container">
+  <form name = "form1" action = "form_ok.jsp" method = "post" onsubmit= "return check()">
+    <div class = "area_label">
+      <label for="stu_name">이름</label>
+    </div>
+    <div class = "area_text">
+      <input type = "text" id = "stu_name" name = "stu_name"><br><br>
+    </div>
+    <div class = "area_label">
+      <label for="stu_id">학번</label>
+    </div>
+    <div class = "area_text">
+      <input type = "text" id = "stu_id" name = "stu_id"><br><br>
+    </div>
+    <div class = "area_label">
+      <label for="stu_dep">학부</label>
+    </div>
+    <div class = "area_text">
+      <input type = "text" id = "stu_dep" name = "stu_dep"><br><br>
+    </div>
+    <div class = "area_label">
+      <label for="stu_rc">RC</label>
+    </div>
+    <div class = "area_text">
+      <select id = "stu_rc" name = "stu_rc">
+        <option class = "rc" value="토레이">토레이</option>
+        <option class = "rc" value="장기려">장기려</option>
+        <option class = "rc" value="손양원">손양원</option>
+        <option class = "rc" value="카이퍼">카이퍼</option>
+        <option class = "rc" value="열송">얼송</option>
+        <option class = "rc" value="카마이클">카마이클</option>
+      </select><br><br>
+    </div>
+    <div class = "area_label">
+      <label for="stu_email">이메일</label>
+    </div>
+    <div class = "area_text">
+      <input type = "email" id = "stu_email" name = "stu_email" required><br><br>
+    </div>
+    <div class = "area_label">
+      <label for="stu_phone">전화번호</label>
+    </div>
+    <div class = "area_text">
+      <input type = "tel" id = "stu_phone" name = "stu_phone" required><br><br>
+    </div>
+    <div class = "area_label">
+      <label for="stu_date">날짜</label>
+    </div>
+    <div class = "area_text">
+      <input type = "date" id = "stu_date" name = "stu_date" required><br><br>
+    </div>
+    <div class = "area_label">
+      <label for="tent">신청항목</label>
+    </div>
+    <div class = "area_text">
+      <select id = "tent" name = "tent">
+        <option class = "tent" value="1번 텐트">1번 텐트</option>
+        <option class = "tent" value="2번 텐트">2번 텐트</option>
+        <option class = "tent" value="3번 텐트">3번 텐트</option>
+        <option class = "tent" value="4번 텐트">4번 텐트</option>
+      </select><br><br>
+    </div>
+    <div class = "area_label">
+      <label for="stu_num">사용인원</label>
+    </div>
+    <div class = "area_text">
+      <input type = "text" id = "stu_num" name = "stu_num"><br><br>
+    </div>
+    <div class = "area_label">
+      <label for="food">음식유무</label>
+    </div>
+    <div class = "area_text">
+      <select id = "food" name = "food">
+        <option class = "food" value="유">유</option>
+        <option class = "food" value="무">무</option>
+      </select><br><br>
+    </div>
+    <div class = "buttons">
+      <input type = 'submit' value="SAVE" id = "submit">
+    </div>
+    <div class = "ttons">
+      <input type = 'reset' value="CANCEL" id = "reset">
+    </div>
+  </form>
+</div>
 </body>
 </html>

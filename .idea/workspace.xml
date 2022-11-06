@@ -9,13 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d033b38-c223-4a26-ad1e-2a06324f2f6d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/form.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/form_ok.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="9d033b38-c223-4a26-ad1e-2a06324f2f6d" name="Changes" comment="add form.jsp and form_ok.jsp">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,8 +152,16 @@
       <option name="presentableId" value="Default" />
       <updated>1667267454600</updated>
       <workItem from="1667267456361" duration="1586000" />
-      <workItem from="1667473880887" duration="3249000" />
+      <workItem from="1667473880887" duration="3774000" />
     </task>
+    <task id="LOCAL-00001" summary="add form.jsp and form_ok.jsp">
+      <created>1667527768958</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1667527768958</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,5 +177,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add form.jsp and form_ok.jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="add form.jsp and form_ok.jsp" />
   </component>
 </project>
